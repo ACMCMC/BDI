@@ -1,3 +1,5 @@
+--Aldán Creo Mariño - BDI 2020/21
+
 CREATE TABLE Medicos(numeroColegiado NUMERIC(5,0), nombrePropio VARCHAR(15), nombreAp1 VARCHAR(15), nombreAp2 VARCHAR(15), especialidad VARCHAR(15), anoEspecializacion DATE, PRIMARY KEY (numeroColegiado));
 
 CREATE TABLE Pacientes(dni CHAR(9), nombrePropio VARCHAR(15), nombreAp1 VARCHAR(15), nombreAp2 VARCHAR(15), direccion VARCHAR(30), fechaNacimiento DATE, numeroColegiado NUMERIC(5,0), PRIMARY KEY(dni), FOREIGN KEY (numeroColegiado) REFERENCES Medicos(numeroColegiado));
