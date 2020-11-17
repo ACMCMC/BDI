@@ -20,7 +20,8 @@ SELECT nombre, viento_max*1000/3600 as velocidad FROM tormentas WHERE temporada 
 
 
 --Obtener las regiones afectadas por tormentas de la temporada 2012 que superaron los 200 km/h
-SELECT DISTINCT pais, region FROM regiones_afectadas as ra cross join tormentas as t WHERE t.nombre = ra.nombre and t.temporada = ra.temporada and t.temporada = 2012 and viento_max > 200;
+SELECT distinct pais, region FROM regiones_afectadas as ra cross join tormentas as t WHERE t.nombre = ra.nombre and t.temporada = ra.temporada and t.temporada = 2012 and viento_max > 200;
+SELECT pais, region FROM regiones_afectadas as ra inner join tormentas as t using(temporada, nombre) WHERE temporada=2012 and viento_max>200;
 
 
 
