@@ -432,7 +432,24 @@ WHERE cd='8x'
              and pc2.precio<pcs.precio);
 
 --25. Mostrar una comprativa de pares PC-Portatil que tengan un precio similar (de no más de 100 euros de diferencia).
-SELECT port.velocidad, port.ram, port.disco, port.pantalla, port.precio, port.modelo, pc.velocidad, pc.ram, pc.disco, pc.cd, pc.precio, pc.modelo FROM pcs as pc cross join portatiles as port WHERE pc.precio > port.precio-100 AND pc.precio < port.precio+100;
+
+SELECT port.velocidad,
+       port.ram,
+       port.disco,
+       port.pantalla,
+       port.precio,
+       port.modelo,
+       pc.velocidad,
+       pc.ram,
+       pc.disco,
+       pc.cd,
+       pc.precio,
+       pc.modelo
+FROM pcs as pc
+cross join portatiles as port
+WHERE pc.precio > port.precio-100
+    AND pc.precio < port.precio+100;
+
 
 SELECT *
 FROM impresoras;
