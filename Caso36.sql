@@ -78,7 +78,7 @@ SELECT p1.velocidad,
        p2.modelo
 FROM pcs as p1
 cross join pcs as p2
-WHERE p1.modelo!=p2.modelo
+WHERE p1.modelo<p2.modelo
     and p1.velocidad=p2.velocidad
     and p1.ram=p2.ram;
 
