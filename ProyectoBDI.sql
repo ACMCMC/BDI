@@ -1,4 +1,4 @@
-CREATE TABLE usuario(nickname VARCHAR(30), contrasena VARCHAR(30), nombre VARCHAR(30), apellido1 VARCHAR(30), apellido2 VARCHAR(30), foto_perfil BYTEA, biografia VARCHAR(240), PRIMARY KEY(nickname));
+CREATE TABLE usuario(nickname VARCHAR(30), contrasena VARCHAR(30), nombre VARCHAR(30), apellido1 VARCHAR(30), apellido2 VARCHAR(30), foto_perfil VARCHAR(60), biografia VARCHAR(140), PRIMARY KEY(nickname));
 
 CREATE TABLE historia(id_historia INTEGER, fecha_publicacion TIMESTAMP, nickname VARCHAR(30), FOREIGN KEY(nickname) REFERENCES usuario(nickname), PRIMARY KEY(nickname, id_historia));
 
@@ -18,7 +18,7 @@ CREATE TABLE comentar(fecha TIMESTAMP, texto VARCHAR(240), id_publicacion INTEGE
 
 CREATE TABLE moderador(nickname VARCHAR(30), FOREIGN KEY (nickname) REFERENCES usuario(nickname), PRIMARY KEY (nickname));
 
-CREATE TABLE bloquear(fecha TIMESTAMP, duracion INTERVAL, motivo VARCHAR(240), nickname_usuario VARCHAR(30), nickname_moderador VARCHAR(30), FOREIGN KEY (nickname_usuario) REFERENCES usuario(nickname), FOREIGN KEY (nickname_moderador) REFERENCES moderador(nickname), PRIMARY KEY (fecha, nickname_usuario, nickname_moderador));
+CREATE TABLE bloquear(fecha TIMESTAMP, fecha_fin TIMESTAMP, motivo VARCHAR(240), nickname_usuario VARCHAR(30), nickname_moderador VARCHAR(30), FOREIGN KEY (nickname_usuario) REFERENCES usuario(nickname), FOREIGN KEY (nickname_moderador) REFERENCES moderador(nickname), PRIMARY KEY (fecha, nickname_usuario, nickname_moderador));
 
 SELECT * FROM usuario;
 SELECT * FROM historia;
