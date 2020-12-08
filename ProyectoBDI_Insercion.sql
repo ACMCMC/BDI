@@ -36,6 +36,8 @@ INSERT INTO ver_historia(id_historia, nickname_historia, nickname) VALUES (0, 'd
 INSERT INTO chat(fecha_creacion, nickname1, nickname2) VALUES ('2020-12-08 18:11:13', 'roquefi', 'hugogs');
 INSERT INTO chat(fecha_creacion, nickname1, nickname2) VALUES ('2020-12-09 14:56:25', 'aldancm', 'hugogs');
 INSERT INTO chat(fecha_creacion, nickname1, nickname2) VALUES ('2020-12-09 14:22:24', 'hugogs', 'diegofp');
+INSERT INTO chat(fecha_creacion, nickname1, nickname2) VALUES ('2020-12-09 14:22:24', 'aldancm', 'diegofp');
+INSERT INTO chat(fecha_creacion, nickname1, nickname2) VALUES ('2020-12-09 14:22:24', 'roquefi', 'diegofp');
 
 INSERT INTO seguir(seguidor, seguido) VALUES ('hugogs', 'diegofp');
 INSERT INTO seguir(seguidor, seguido) VALUES ('hugogs', 'aldancm');
@@ -52,8 +54,10 @@ INSERT INTO seguir(seguidor, seguido) VALUES ('roquefi', 'diegofp');
 
 INSERT INTO publicacion(id_publicacion, descripcion, fecha_publicacion, nickname) VALUES (0, 'Una puesta de sol resplandeciente', '2020-12-09 14:56:25', 'hugogs');
 INSERT INTO publicacion(id_publicacion, descripcion, fecha_publicacion, nickname) VALUES (1, 'Mi gato comiendo pienso para gatos', '2020-12-09 14:22:24', 'hugogs');
-INSERT INTO publicacion(id_publicacion, descripcion, fecha_publicacion, nickname) VALUES (2, 'Yo jugando al RiskETSE', '2020-12-09 14:56:25', 'aldancm');
+INSERT INTO publicacion(id_publicacion, descripcion, fecha_publicacion, nickname) VALUES (2, 'Yo jugando al RiskETSE', '2020-12-09 14:50:25', 'aldancm');
 INSERT INTO publicacion(id_publicacion, descripcion, fecha_publicacion, nickname) VALUES (3, 'Mi ordenador echando humo', '2020-12-09 14:56:25', 'roquefi');
+INSERT INTO publicacion(id_publicacion, descripcion, fecha_publicacion, nickname) VALUES (4, 'He hecho 10000 consultas a mi BD y esto ha pasado...', '2020-12-09 14:57:25', 'roquefi');
+INSERT INTO publicacion(id_publicacion, descripcion, fecha_publicacion, nickname) VALUES (5, 'Aquí, haciendo el proyecto de BDI', '2020-13-09 14:57:25', 'diegofp');
 
 INSERT INTO dar_like(id_publicacion, nickname) VALUES (0, 'aldancm');
 INSERT INTO dar_like(id_publicacion, nickname) VALUES (0, 'roquefi');
