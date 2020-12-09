@@ -8,7 +8,7 @@ CREATE TABLE ver_historia(id_historia INTEGER, nickname_historia VARCHAR(30), ni
 
 CREATE TABLE chat(fecha_creacion TIMESTAMP, nickname1 VARCHAR(30), nickname2 VARCHAR(30), FOREIGN KEY(nickname1) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (nickname2) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY (nickname1, nickname2));
 
-CREATE TABLE seguir(seguidor VARCHAR(30), seguido VARCHAR(30), FOREIGN KEY (seguidor) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (seguidor) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY (seguidor, seguido));
+CREATE TABLE seguir(seguidor VARCHAR(30), seguido VARCHAR(30), FOREIGN KEY (seguido) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (seguidor) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY (seguidor, seguido));
 
 CREATE TABLE publicacion(id_publicacion INTEGER, descripcion VARCHAR(240), fecha_publicacion TIMESTAMP, nickname VARCHAR(30), FOREIGN KEY (nickname) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY (id_publicacion));
 
