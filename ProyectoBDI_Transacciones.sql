@@ -30,7 +30,7 @@ INSERT INTO historia(id_historia, fecha_publicacion, nickname) VALUES (0, '1970-
 
 INSERT INTO chat(fecha_creacion, nickname1, nickname2) VALUES ('1970-01-01 00:00:00', 'nickname1', 'nickname2'); --T16
 
-DELETE FROM chat WHERE nickname1='nickname' and fecha_creacion='1970-01-01 00:00:00'; --T17
+DELETE FROM chat WHERE (nickname1='nickname1' and nickname2='nickname2') or (nickname1='nickname2' and nickname2='nickname1'); --T17. En este caso, queremos borrar un chat entre dos usuarios, que pueden estar en nickname1 y nickname2, o viceversa.
 
 INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('1970-01-01 00:00:00', 'comentario', 0, 'nickname');  --T18
 
