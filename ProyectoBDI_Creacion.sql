@@ -23,34 +23,3 @@ CREATE TABLE moderador(nickname VARCHAR(30), FOREIGN KEY (nickname) REFERENCES u
 CREATE TABLE bloquear(fecha TIMESTAMP, fecha_fin TIMESTAMP, motivo VARCHAR(240), nickname_usuario VARCHAR(30), nickname_moderador VARCHAR(30), FOREIGN KEY (nickname_usuario) REFERENCES usuario(nickname) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (nickname_moderador) REFERENCES moderador(nickname) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY (fecha, nickname_usuario, nickname_moderador));
 
 COMMIT;
-
-
-
-
-
-
-
-
-SELECT * FROM usuario;
-SELECT * FROM historia;
-SELECT * FROM ver_historia;
-SELECT * FROM chat;
-SELECT * FROM seguir;
-SELECT * FROM publicacion;
-SELECT * FROM dar_like;
-SELECT * FROM ver_publicacion;
-SELECT * FROM comentar;
-SELECT * FROM moderador;
-SELECT * FROM bloquear;
-
-DROP TABLE usuario CASCADE;
-DROP TABLE historia CASCADE;
-DROP TABLE ver_historia CASCADE;
-DROP TABLE chat CASCADE;
-DROP TABLE seguir CASCADE;
-DROP TABLE publicacion CASCADE;
-DROP TABLE dar_like CASCADE;
-DROP TABLE ver_publicacion CASCADE;
-DROP TABLE comentar CASCADE;
-DROP TABLE moderador CASCADE;
-DROP TABLE bloquear CASCADE;
