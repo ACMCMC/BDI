@@ -116,11 +116,11 @@ INSERT INTO ver_publicacion(id_publicacion, nickname) VALUES (7, 'sarasc');
 INSERT INTO ver_publicacion(id_publicacion, nickname) VALUES (7, 'diegofp');
 INSERT INTO ver_publicacion(id_publicacion, nickname) VALUES (8, 'roquefi');
 
-INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-08 17:01:15', 'Claro! A quien no le va a gustar un AmongETSE?', '7', 'hugogs');
-INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-09 19:59:36', 'El mío ha petado trabajando en el RiskETSE. Enfin la hipocresía.', '3', 'aldancm');
-INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-09 22:36:45', 'Seguro que están muy ricas!', '8', 'roquefi');
-INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-11-29 22:18:20', 'I feel u sis!', '5', 'aldancm');
-INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-09 20:20:40', 'Me has dejado con la intriga...', '4', 'elenafd');
+INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-08 17:01:15', 'Claro! A quien no le va a gustar un AmongETSE?', 7, 'hugogs');
+INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-09 19:59:36', 'El mío ha petado trabajando en el RiskETSE. Enfin la hipocresía.', 3, 'aldancm');
+INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-09 22:36:45', 'Seguro que están muy ricas!', 8, 'roquefi');
+INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-11-29 22:18:20', 'I feel u sis!', 5, 'aldancm');
+INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('2020-12-09 20:20:40', 'Me has dejado con la intriga...', 4, 'elenafd');
 
 INSERT INTO moderador(nickname) VALUES ('aldancm');
 INSERT INTO moderador(nickname) VALUES ('hugogs');
