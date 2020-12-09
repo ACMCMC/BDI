@@ -136,21 +136,3 @@ INSERT INTO bloquear(fecha, fecha_fin, motivo, nickname_usuario, nickname_modera
 INSERT INTO bloquear(fecha, fecha_fin, motivo, nickname_usuario, nickname_moderador) VALUES ('2020-12-08 09:46:09', '2020-12-09 15:19:45', 'Spam.', 'diegofp', 'roquefi');
 
 COMMIT;
-
-
-
-
-
-DELETE FROM usuario; --Borra todos los datos porque todas las tablas dependen de esta, y tenemos borrado en cascada
-
-SELECT * FROM usuario; --Para ver los datos de las tablas
-SELECT * FROM historia;
-SELECT * FROM ver_historia;
-SELECT * FROM chat;
-SELECT * FROM seguir;
-SELECT * FROM publicacion;
-SELECT * FROM dar_like;
-SELECT * FROM ver_publicacion;
-SELECT * FROM comentar;
-SELECT * FROM moderador;
-SELECT * FROM bloquear;
