@@ -36,7 +36,7 @@ INSERT INTO comentar(fecha, texto, id_publicacion, nickname) VALUES('1970-01-01 
 
 DELETE FROM comentar WHERE nickname='nickname';  --T19
 
-SELECT nickname, CAST((SELECT count(*) FROM seguir WHERE seguido=nickname) AS FLOAT)/(SELECT count(*) FROM seguir WHERE seguidor=nickname) as popularidad FROM usuario WHERE exists(SELECT * FROM seguir WHERE seguidor=nickname); --T20. El número de seguidores del usuario entre el número de usuarios que sigue. Sólo lo calculamos para los usuarios que siguen a alguien, ya que si no tenemos un error de división por 0. (no tiene sentido calcular la popularidad de alguien que no sigue a nadie).
+SELECT nickname, CAST((SELECT count(*) FROM seguir WHERE seguido=nickname) AS FLOAT)/(SELECT count(*) FROM seguir WHERE seguidor=nickname) as popularidad FROM usuario WHERE exists(SELECT * FROM seguir WHERE seguidor=nickname); --T20. El número de seguidores del usuario entre el número de usuarios que sigue. Sólo lo calculamos para los usuarios que siguen a alguien, ya que si no tenemos un error de división por 0. (no tiene sentido calcular la popularidad de alguien que no sigue a nadie, ya que no tiene valor en su número de seguidos).
 
 SELECT nickname, (SELECT count(*) FROM dar_like WHERE id_publicacion in (SELECT id_publicacion FROM publicacion WHERE publicacion.nickname=usuario.nickname) and dar_like.nickname in (SELECT seguidor FROM seguir WHERE seguir.seguido=usuario.nickname)) as num_likes FROM usuario; --T21. Para todos los usuarios, mostramos el número de likes en sus publicaciones, contando sólo los likes de sus seguidores.
 
